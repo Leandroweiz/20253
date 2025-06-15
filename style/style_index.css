@@ -1,0 +1,67 @@
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #f9d423, #ff4e50);
+      font-family: 'Poetsen One', cursive;
+      text-align: center;
+      color: #03080e;
+    }
+
+    .pular {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #e91e63;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+
+    .imagem-intro img {
+      margin-top: 30px;
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .intro {
+      margin-top: 40px;
+      font-size: 24px;
+      animation: crescer 8s ease-in-out forwards;
+    }
+
+    @keyframes crescer {
+      0% { font-size: 8px; opacity: 0; }
+      25% { font-size: 14px; opacity: 1; }
+      50% { font-size: 20px; }
+      75% { font-size: 28px; }
+      100% { font-size: 36px; opacity: 0;}
+    }
+    .caixa-boas-vindas {
+  position: fixed;
+  top: 200px;
+  left: 20px;
+  width: 280px;
+  background-color: #fff8dc; /* cor suave tipo pergaminho */
+  border: 2px solid #deb887; /* marrom claro */
+  border-radius: 12px;
+  padding: 16px;
+  font-family: 'Poetsen One', sans-serif;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.caixa-boas-vindas p {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #4b3621;
+}
+
+.caixa-boas-vindas .assinatura {
+  text-align: right;
+  font-style: italic;
+  color: #8b4513;
+  font-size: 14px;
+}
