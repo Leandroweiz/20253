@@ -1,53 +1,57 @@
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #f9d423, #ff4e50);
-      font-family: 'Poetsen One', cursive;
-      text-align: center;
-      color: #03080e;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #f9d423, #ff4e50);
+  font-family: 'Poetsen One', cursive;
+  text-align: center;
+  color: #03080e;
+}
 
-    .pular {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #e91e63;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 10px;
-    }
+.pular {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #e91e63;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  z-index: 1000;
+}
 
-    .imagem-intro img {
-      margin-top: 30px;
-      max-width: 300px;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    }
+.imagem-intro img {
+  margin-top: 30px;
+  max-width: 80%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
 
-    .intro {
-      margin-top: 40px;
-      font-size: 24px;
-      animation: crescer 8s ease-in-out forwards;
-    }
+.intro {
+  margin-top: 40px;
+  font-size: 2vw;
+  animation: crescer 12s ease-in-out forwards;
+}
 
-    @keyframes crescer {
-      0% { font-size: 8px; opacity: 0; }
-      25% { font-size: 14px; opacity: 1; }
-      50% { font-size: 20px; }
-      75% { font-size: 28px; }
-      100% { font-size: 36px; opacity: 0;}
-    }
-    .caixa-boas-vindas {
+@keyframes crescer {
+  0% { font-size: 0.5vw; opacity: 0; }
+  8% { font-size: 0.5vw; opacity: 1; }
+  10% { font-size: 0.5vw; }
+  15% { font-size: 0.5vw; }
+  25% { font-size: 0.5vw; opacity: 0;}
+}
+
+.caixa-boas-vindas {
   position: fixed;
   top: 200px;
   left: 20px;
-  width: 280px;
-  background-color: #fff8dc; /* cor suave tipo pergaminho */
-  border: 2px solid #deb887; /* marrom claro */
+  width: 260px;
+  max-width: 80%;
+  background-color: #fff8dc;
+  border: 2px solid #deb887;
   border-radius: 12px;
-  padding: 16px;
+  padding: 10px;
   font-family: 'Poetsen One', sans-serif;
   box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
   z-index: 999;
@@ -64,4 +68,46 @@
   font-style: italic;
   color: #8b4513;
   font-size: 14px;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .intro {
+    font-size: 2vw;
+  }
+
+  .caixa-boas-vindas {
+    top: auto;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+  }
+
+  .pular {
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 150px) {
+  .intro {
+    font-size: 1vw;
+  }
+  .caixa-boas-vindas {
+    font-size: 14px;
+  }
+
+  .imagem-intro img {
+    max-width: 60%;
+  }
 }

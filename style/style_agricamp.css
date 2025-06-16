@@ -6,35 +6,43 @@
 }
 
 body {
-  font-family: Tangerine, sans-serif;
+  font-family: 'Tangerine', sans-serif;
   background: #f5f5f5;
   color: #333;
-  min-height: 200vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-nav a {
-      margin: 0 10px;
-      color: #000080;
-      font-weight: bold;
-      font-size: 1.2em;
-      text-decoration: none;
-      padding: 10px 15px;
-      border-radius: 10px;
-      background-color: #ffffff;
-      transition: all 0.3s ease;
-    }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
 
-  nav a:hover {
-      background-color: #ff6600;
-      color: white;
-    }
+nav a {
+  color: #000080;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #ff6600;
+  color: white;
+}
 
 header {
   background: #357a38;
   color: white;
   padding: 1em;
+  text-align: center;
 }
 
 header h1 {
@@ -83,7 +91,8 @@ main {
   flex-direction: column;
 }
 
-.imagem-boasvindas, .imagem-pensar {
+.imagem-boasvindas,
+.imagem-pensar {
   max-width: 300px;
   margin-bottom: 20px;
 }
@@ -126,16 +135,17 @@ main {
   height: auto;
   margin-bottom: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 
 .conteudo-texto {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: justify;
   font-size: 1.1rem;
   line-height: 1.6;
   color: #2a5c2d;
+  padding: 0 15px;
 }
 
 /* Pergunta na tela pensar */
@@ -145,60 +155,63 @@ main {
   color: #357a38;
   max-width: 600px;
   text-align: center;
+  padding: 0 10px;
 }
 
 .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+  padding: 0 10px;
 }
 
 .image-grid img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: transform 0.3s;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
 }
 
 .image-grid img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
+/* Agricamp section */
 .agricamp {
   display: flex;
   flex-wrap: wrap;
-  margin: 30px 0;
   background: #a395b4;
-  box-shadow: 0 4px 10px #877997; /* Alto relevo */
+  box-shadow: 0 4px 10px #877997;
   border-radius: 10px;
+  margin: 30px 10px;
   overflow: hidden;
 }
 
 .agricamp.reverse {
-  flex-direction: row-reverse; /* Inverte a ordem: imagem à direita */
+  flex-direction: row-reverse;
 }
 
-.agricamp, .text-box {
-  flex: 1 1 100px;     /* Cresce conforme necessário, mínimo 100px */
-  padding: 20px;
-}
-
-.agricamp {
-  width: 50%;         /* Imagem ocupa toda a largura da caixa */
+.agricamp img {
+  width: 100%;
+  max-width: 400px;
   height: auto;
-  border-radius: 10px; /* Bordas arredondadas */
+  border-radius: 10px;
+  flex: 1 1 100%;
 }
 
 .text-box {
+  flex: 1 1 100%;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1em;
   text-align: center;
+  font-size: 1.1em;
 }
-#agricamp {                                   
-  padding: 40px;
+
+#agricamp {
+  padding: 40px 20px;
   background-color: #f9f9f9;
 }
 
@@ -208,11 +221,14 @@ main {
   margin-bottom: 30px;
 }
 
+/* Imagem-box section */
 .imagem-box {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 40px;
   animation: fadeIn 1s ease-in-out;
+  padding: 0 10px;
 }
 
 .imagem-box.esquerda {
@@ -253,7 +269,6 @@ main {
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -265,13 +280,72 @@ main {
     opacity: 0;
     transform: translateX(-20px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
+/* Rodapé */
 footer {
+  background-color: #e0e0e0;
+  padding: 15px;
   text-align: center;
+  font-size: 0.9em;
+}
+
+/* ------------------ */
+/* MEDIA QUERIES 📱 */
+/* ------------------ */
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .texto-crescendo {
+    font-size: 1rem;
+  }
+
+  nav a {
+    font-size: 1em;
+    padding: 8px 10px;
+  }
+
+  .imagem-box img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .texto {
+    margin: 10px 0;
+    font-size: 1em;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagem-pagina {
+    max-width: 100%;
+  }
+
+  .imagem-box {
+    flex-direction: column;
+  }
+
+  .imagem-box img {
+    max-width: 90%;
+  }
+
+  .texto {
+    font-size: 0.95em;
+  }
 }
