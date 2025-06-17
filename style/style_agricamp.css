@@ -60,7 +60,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #ff6600;
+  background-color: #82ee29;
   color: white;
 }
 
@@ -267,6 +267,22 @@ nav a:hover {
   background-color: #2a5c2d;
 }
 
+h1 {
+  font-size: 2.5em;
+  color: #e91e63;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #ffffff;
+  background-color: #4CAF50;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+  display: inline-block;
+}
+
 /* -------------------------- */
 /* MEDIA QUERIES - RESPONSIVO */
 /* -------------------------- */
@@ -322,4 +338,27 @@ nav a:hover {
   .pagina-com-imagem .imagem-pagina {
     margin-bottom: 10px;
   }
+} 
+.agrinho-tecnologia {
+  background-color: #f7fff0;
+  border-left: 8px solid #4caf50;
+  padding: 25px;
+  margin: 40px auto;
+  border-radius: 12px;
+  max-width: 900px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  line-height: 1.7;
 }
+
+.agrinho-tecnologia h3 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.agrinho-tecnologia p {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
