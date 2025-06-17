@@ -44,10 +44,10 @@ body {
 
 .caixa-boas-vindas {
   position: fixed;
-  top: 200px;
+  top: 20px;
   left: 20px;
-  width: 260px;
-  max-width: 80%;
+  width: 300px;
+  max-width: 70%;
   background-color: #fff8dc;
   border: 2px solid #deb887;
   border-radius: 12px;
@@ -58,13 +58,13 @@ body {
 }
 
 .caixa-boas-vindas p {
-  margin: 0 0 8px 0;
-  font-size: 16px;
+  margin: 0 0 4px 0;
+  font-size: 12px;
   color: #4b3621;
 }
 
 .caixa-boas-vindas .assinatura {
-  text-align: left;
+  text-align: center;
   font-style: italic;
   color: #8b4513;
   font-size: 12px;
