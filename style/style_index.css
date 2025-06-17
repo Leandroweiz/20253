@@ -64,10 +64,10 @@ body {
 }
 
 .caixa-boas-vindas .assinatura {
-  text-align: right;
+  text-align: left;
   font-style: italic;
   color: #8b4513;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 footer {
