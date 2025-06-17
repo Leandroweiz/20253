@@ -1,10 +1,11 @@
-/* Reset básico */
+/* RESET BÁSICO */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ESTRUTURA GERAL */
 body {
   font-family: 'Tangerine', sans-serif;
   background: #f5f5f5;
@@ -14,6 +15,31 @@ body {
   flex-direction: column;
 }
 
+main {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+footer {
+  background-color: #e0e0e0;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/* CABEÇALHO */
+header {
+  background: #357a38;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0.5em;
+}
+
+/* NAVEGAÇÃO */
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -38,39 +64,7 @@ nav a:hover {
   color: white;
 }
 
-header {
-  background: #357a38;
-  color: white;
-  padding: 1em;
-  text-align: center;
-}
-
-header h1 {
-  margin-bottom: 0.5em;
-}
-
-main {
-  padding: 20px;
-  flex-grow: 1;
-}
-
-.menu-links a.link-menu {
-  display: inline-block;
-  margin: 10px 15px 10px 0;
-  padding: 8px 15px;
-  background-color: #357a38;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.menu-links a.link-menu:hover {
-  background-color: #2a5c2d;
-}
-
-/* Tela de boas-vindas */
+/* TELA DE BOAS-VINDAS */
 .tela-cheia {
   position: fixed;
   top: 0;
@@ -97,35 +91,27 @@ main {
   margin-bottom: 20px;
 }
 
+/* TEXTO COM ANIMAÇÃO */
 .texto-crescendo {
   font-size: 1.2rem;
   font-weight: bold;
-  animation: crescerTexto 10s ease forwards;
   text-align: center;
   color: #2a5c2d;
   max-width: 90vw;
+  animation: crescerTexto 10s ease forwards;
 }
 
-/* Animação do texto crescendo */
 @keyframes crescerTexto {
-  0% {
-    font-size: 1.2rem;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    font-size: 1.5rem;
-    opacity: 0;
-  }
+  0% { font-size: 1.2rem; opacity: 0; }
+  50% { opacity: 1; }
+  100% { font-size: 1.5rem; opacity: 0; }
 }
 
 .hidden {
   display: none !important;
 }
 
-/* Página com imagem e texto */
+/* CONTEÚDO COM IMAGEM */
 .pagina-com-imagem {
   text-align: center;
 }
@@ -148,7 +134,7 @@ main {
   padding: 0 15px;
 }
 
-/* Pergunta na tela pensar */
+/* PERGUNTA */
 .pergunta {
   font-size: 1.2rem;
   margin-bottom: 20px;
@@ -158,6 +144,7 @@ main {
   padding: 0 10px;
 }
 
+/* GRADE DE IMAGENS */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -177,7 +164,18 @@ main {
   transform: scale(1.05);
 }
 
-/* Agricamp section */
+/* SEÇÃO AGRICAMP */
+#agricamp {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+#agricamp h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
 .agricamp {
   display: flex;
   flex-wrap: wrap;
@@ -186,10 +184,6 @@ main {
   border-radius: 10px;
   margin: 30px 10px;
   overflow: hidden;
-}
-
-.agricamp.reverse {
-  flex-direction: row-reverse;
 }
 
 .agricamp img {
@@ -210,33 +204,14 @@ main {
   font-size: 1.1em;
 }
 
-#agricamp {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-}
-
-#agricamp h2 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 30px;
-}
-
-/* Imagem-box section */
+/* BLOCOS DE IMAGEM COM TEXTO */
 .imagem-box {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 40px;
-  animation: fadeIn 1s ease-in-out;
   padding: 0 10px;
-}
-
-.imagem-box.esquerda {
-  flex-direction: row;
-}
-
-.imagem-box.direita {
-  flex-direction: row-reverse;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .imagem-box img {
@@ -252,7 +227,7 @@ main {
 }
 
 .texto {
-  max-width: 400px;
+  max-width: 700px;
   margin: 0 20px;
   padding: 20px;
   background-color: white;
@@ -264,39 +239,37 @@ main {
   animation: fadeInText 1.5s ease-in-out;
 }
 
+/* ANIMAÇÕES */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInText {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
-/* Rodapé */
-footer {
-  background-color: #e0e0e0;
-  padding: 15px;
-  text-align: center;
-  font-size: 0.9em;
+/* LINKS ESPECIAIS NO MENU */
+.menu-links a.link-menu {
+  display: inline-block;
+  margin: 10px 15px 10px 0;
+  padding: 8px 15px;
+  background-color: #357a38;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-/* ------------------ */
-/* MEDIA QUERIES 📱 */
-/* ------------------ */
+.menu-links a.link-menu:hover {
+  background-color: #2a5c2d;
+}
+
+/* -------------------------- */
+/* MEDIA QUERIES - RESPONSIVO */
+/* -------------------------- */
 
 @media (max-width: 768px) {
   header h1 {
@@ -312,13 +285,18 @@ footer {
     padding: 8px 10px;
   }
 
+  .imagem-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .imagem-box img {
-    width: 100%;
-    max-width: 250px;
+    max-width: 90%;
+    margin-bottom: 15px;
   }
 
   .texto {
-    margin: 10px 0;
+    margin: 0 auto;
     font-size: 1em;
   }
 
@@ -337,15 +315,11 @@ footer {
     max-width: 100%;
   }
 
-  .imagem-box {
-    flex-direction: column;
-  }
-
-  .imagem-box img {
-    max-width: 90%;
-  }
-
   .texto {
     font-size: 0.95em;
+  }
+
+  .pagina-com-imagem .imagem-pagina {
+    margin-bottom: 10px;
   }
 }
