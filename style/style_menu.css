@@ -103,23 +103,41 @@ main {
   margin-right: auto;
   padding: 0 10px;
 }
-
-.audio-control {
-  position: fixed;
-  bottom: 20px;
-  left: 10px;
-  z-index: 999;
-  background-color: white;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-  max-width: 90%;
-}
+ /* Caixa do controle de áudio */
+    .audio-container {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border: 1px solid #ccc;
+    }
 
 .audio-control p {
   font-size: 0.9em;
   margin: 5px 0 0 0;
 }
+
+ /* Checkbox escondido */
+    #fechar-audio {
+      display: none;
+    }
+
+    /* Botão de fechar */
+    .label-fechar {
+      display: inline-block;
+      margin-left: 10px;
+      color: red;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Esconde a caixa quando o checkbox é marcado */
+    #fechar-audio:checked ~ .audio-container {
+      display: none;
+    }
 
 footer {
   text-align: center;
