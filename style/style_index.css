@@ -43,10 +43,10 @@ body {
 }
 
 .caixa-boas-vindas {
-  position: fixed;
+  position: top;
   top: 20px;
   left: 20px;
-  width: 300px;
+  width: 500px;
   max-width: 70%;
   background-color: #fff8dc;
   border: 2px solid #deb887;
